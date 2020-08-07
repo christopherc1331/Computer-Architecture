@@ -10,4 +10,4 @@ cpu = CPU()
 cpu.load()
 cpu.run()
 
-print(cpu.ram)
+# print(cpu.ram)

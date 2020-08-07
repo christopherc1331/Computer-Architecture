@@ -20,6 +20,9 @@ try:
                 num == possible_num[:8]
                 print(f"{num}: {int(num,2)}")
 
+                self.ram[address] = int(num,2)
+                address += 1
+
 
 except FileNotFoundError:
     print(f"{sys.argv[0]}: {sys.argv[1]} not found")

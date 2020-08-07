@@ -17,10 +17,10 @@ class CPU:
         self.register = [None] * 8
 
     def ram_read(self, index):
-        print(self.ram[index])
+        print(self.register[self.ram[index]])
 
     def ram_write(self,operand_a, operand_b):
-        self.ram[operand_a] = operand_b
+        self.register[operand_a] = operand_b
 
 
     def load(self):
@@ -84,7 +84,7 @@ class CPU:
 
             if instruction == PRN:
                 self.ram_read(self.pc+1)
-            self.pc += 1    
+                self.pc += 2    
 
             if instruction == LDI:
                 operand_a = self.ram[self.pc + 1]
